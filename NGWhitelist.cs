@@ -28,9 +28,7 @@ namespace NGWhitelist
             Commands.ChatCommands.Add(new Command(WLEdit, new string[3] { "ngwhitelist", "ngwl", "wl" }));
             ServerApi.Hooks.ServerJoin.Register(this, OnJoin);
         }
-        protected override void Dispose(bool disposing) {
-            ServerApi.Hooks.ServerJoin.Deregister(this, OnJoin);
-        }
+        protected override void Dispose(bool disposing) => ServerApi.Hooks.ServerJoin.Deregister(this, OnJoin);
 
         private void WLEdit(CommandArgs args) {
             if (args.Parameters.Count > 0) {
