@@ -1,0 +1,12 @@
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\NGWhitelist.dll
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\NGWhitelist.pdb
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\OTAPI.dll
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\TerrariaServer.exe
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\TShockAPI.dll
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\Newtonsoft.Json.dll
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\OTAPI.pdb
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\TerrariaServer.pdb
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\Newtonsoft.Json.xml
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\obj\Debug\NGWhitelist.csprojResolveAssemblyReference.cache
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\obj\Debug\NGWhitelist.dll
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\obj\Debug\NGWhitelist.pdb
