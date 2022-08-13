@@ -7,6 +7,8 @@ D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\b
 D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\OTAPI.pdb
 D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\TerrariaServer.pdb
 D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\bin\Debug\Newtonsoft.Json.xml
-D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\obj\Debug\NGWhitelist.csprojResolveAssemblyReference.cache
 D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\obj\Debug\NGWhitelist.dll
 D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\obj\Debug\NGWhitelist.pdb
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\obj\Debug\NGWhitelist.csproj.AssemblyReference.cache
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\obj\Debug\NGWhitelist.csproj.CoreCompileInputs.cache
+D:\Users\PC\Desktop\Folders\Repositories\tshock-plugin\NGWhitelist\NGWhitelist\obj\Debug\NGWhitelist.csproj.CopyComplete

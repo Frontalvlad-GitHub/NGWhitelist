@@ -31,6 +31,13 @@ namespace NGWhitelist
         protected override void Dispose(bool disposing) => ServerApi.Hooks.ServerJoin.Deregister(this, OnJoin);
 
         private void WLEdit(CommandArgs args) {
+            var error_or_success = new string[4] {
+                "[i:547] [C/e3693f:NGWhiteList |] [C/ffffff:Кажется, данная команда не найдена, или у вас нет прав на ее выполнение]", // error command not found or not permissions 0 
+                "[i:547] [C/e3693f:NGWhiteList |] [C/ffffff:Извините, у вас нет прав на выполнение данной команды]", // error not permissions 1
+                "[i:547] [C/e3693f:NGWhiteList |] [C/ffffff:Вы должны указать никнейм интересующего вас игрока]", // error player not found 2
+                "[i: 547] [C/e3693f:NGWhiteList |] [C/ 808080:Whitelist] [C/ ffffff:успешно обновлен]", //whitelist update 3
+            };
+
             if (args.Parameters.Count > 0) {
                 if (args.Parameters[0].Equals("add", StringComparison.CurrentCultureIgnoreCase) && args.Player.HasPermission("ngwhitelist.add")) {
                     if (args.Player.HasPermission("ngwhitelist.add")) {
@@ -40,21 +47,21 @@ namespace NGWhitelist
                                 NGList = File.ReadAllLines($"{NGPath}ngwhitelist.txt").ToList();
                                 args.Player.SendInfoMessage($"[i:547] [C/e3693f:NGWhiteList |] [C/808080:{args.Parameters[1]}] [C/ffffff:успешно добавлен в whitelist]");
                             } else { args.Player.SendInfoMessage($"[i:547] [C/e3693f:NGWhiteList |] [C/808080:{args.Parameters[1]}] [C/ffffff:уже находится в whitelist]"); }
-                        } else { args.Player.SendInfoMessage($"[i:547] [C/e3693f:NGWhiteList |] [C/ffffff:Вы должны указать никнейм интересующего вас игрока]"); }
-                    } else { args.Player.SendInfoMessage($"[i:547] [C/e3693f:NGWhiteList |] [C/ffffff:Извините, у вас нет прав на выполнение данной команды"); }
+                        } else { args.Player.SendInfoMessage(error_or_success[2]); }
+                    } else { args.Player.SendInfoMessage(error_or_success[1]); }
                 } else if (args.Parameters[0].Equals("reload", StringComparison.CurrentCultureIgnoreCase)) {
                     // Update whitelist
                     if (args.Player.HasPermission("ngwhitelist.reload")) {
                         NGList = File.ReadAllLines($"{NGPath}ngwhitelist.txt").ToList();
-                        args.Player.SendInfoMessage($"[i:547] [C/e3693f:NGWhiteList |] [C/808080:Whitelist] [C/ffffff:успешно обновлен]");
-                    } else { args.Player.SendInfoMessage($"[i:547] [C/e3693f:NGWhiteList |] [C/ffffff:Извините, у вас нет прав на выполнение данной команды"); }
+                        args.Player.SendInfoMessage(error_or_success[3]);
+                    } else { args.Player.SendInfoMessage(error_or_success[1]); }
                 } else if (args.Parameters[0].Equals("list", StringComparison.CurrentCultureIgnoreCase)) {
                     // Displaying players on the whitelist
                     if (args.Player.HasPermission("ngwhitelist.list")) {
                         args.Player.SendInfoMessage($"[i:547] [C/e3693f:NGWhiteList |] [C/ffffff:Список игроков, допущенных на сервер:] [C/808080:{String.Join(", ", NGList)}]");
-                    } else { args.Player.SendInfoMessage($"[i:547] [C/e3693f:NGWhiteList |] [C/ffffff:Извините, у вас нет прав на выполнение данной команды"); }
-                } else { args.Player.SendInfoMessage($"[i:547] [C/e3693f:NGWhiteList |] [C/ffffff:Кажется, данная команда не найдена, или у вас нет прав на ее выполнение."); }
-            } else { args.Player.SendInfoMessage($"[i:547] [C/e3693f:NGWhiteList |] [C/ffffff:Кажется, данная команда не найдена, или у вас нет прав на ее выполнение."); }
+                    } else { args.Player.SendInfoMessage(error_or_success[1]); }
+                } else { args.Player.SendInfoMessage(error_or_success[0]); }
+            } else { args.Player.SendInfoMessage(error_or_success[0]); }
         }
         private void OnJoin(JoinEventArgs args) {
             if (!NGList.Contains(TShock.Players[args.Who].Name)) {
